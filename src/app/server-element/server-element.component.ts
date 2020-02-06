@@ -7,7 +7,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class ServerElementComponent implements OnInit {
-  @Input() element: {type: string, name: string, content: string };
+  @Input() element: {type: string, name: string, content: string, dodatak: string };
   constructor() { }
 
   ngOnInit() {
