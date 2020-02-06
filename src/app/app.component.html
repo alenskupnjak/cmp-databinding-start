@@ -7,7 +7,16 @@
 
   <div class="row">
     <div class="col-xs-12">
-        <app-server-element *ngFor="let data of serverElements" [element]="data"></app-server-element>
+      <button class="btn btn-primary" (click)="onChangeFirst()"> Change first element</button>
+      <button class="btn btn-danger" (click)="onDestroyFirst()"> Delete first element</button>
+        <app-server-element *ngFor="let data of serverElements"
+        [element]="data"
+        [ime]=data.name>
+          <p>
+            <strong *ngIf="data.type === 'server'" style="color: red">{{ data.content }}</strong>
+            <em *ngIf="data.type === 'blueprint'">{{ data.content }}</em>
+          </p>
+        </app-server-element>
     </div>
   </div>
 </div>

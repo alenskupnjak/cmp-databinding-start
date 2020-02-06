@@ -25,6 +25,16 @@ export class AppComponent {
       content: bluePrintData.serverContent,
       dodatak: bluePrintData.dodatak
     });
+
+
+  }
+
+  onChangeFirst() {
+    this.serverElements[0].name = 'Promjenjeno!';
+  }
+
+  onDestroyFirst() {
+   this.serverElements.splice(0, 1);
   }
 
 
